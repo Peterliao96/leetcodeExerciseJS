@@ -4,7 +4,7 @@
   "description": "my leetcode exercise in js",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Peterliao96/leetcodeExerciseJS#readme",
   "devDependencies": {
     "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "leetcode-cli": "^2.5.4"
   }
 }
