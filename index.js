@@ -1,8 +1,10 @@
 const twoSum = require('./1.two-sum')
-console.log(twoSum([2,7,11,15],9))
 const addTwoNumbers = require('./2.add-two-numbers')
 const lengthOfLongestSubstring = require('./3.longest-substring-without-repeating-characters')
+//console.log(lengthOfLongestSubstring('caas'))
 const findMedianSortedArrays = require('./4.median-of-two-sorted-arrays')
+console.log(findMedianSortedArrays([1,3],[2]))
 const longestPalindrome = require('./5.longest-palindromic-substring');
-
+const letterCombinations = require('./17.letter-combinations-of-a-phone-number')
+//console.log(letterCombinations('2456'))
 //console.log(findMedianSortedArrays([1,2],[3,4]))

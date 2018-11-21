@@ -9,10 +9,10 @@ var findMedianSortedArrays = function(nums1, nums2) {
   let j = 0
   while (i < nums1.length || j < nums2.length){
     if(i == nums1.length){
-      arr = arr.concat(nums2)
+      arr = arr.concat(nums2.slice(j))
       break
     } else if (j == nums2.length){
-      arr = arr.concat(nums1)
+      arr = arr.concat(nums1.slice(i))
       break
     } else if(nums1[i] > nums2[j]){
       arr.push(nums2[j])
@@ -23,7 +23,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
     }
   }
   if (arr.length % 2 == 1){
-    return arr[Math.ceil(arr.length / 2)]
+    return arr[(arr.length -1)/ 2]
   } else {
     return (arr[(arr.length / 2)-1] + arr[(arr.length /2)]) /2
   }

@@ -8,10 +8,14 @@ var lengthOfLongestSubstring = function(s) {
   let j = 0
   let max_len = 0
   let accS = ""
+  if (s == ' '){
+    return 1
+  }
   while (i < s.length && j < s.length){
     if (!(accS.includes(s[j]))){
       accS += s[j]
       j+=1;
+      dict[accS] = j - i
     } else {
       dict[accS] = j - i
       i+= 1;
@@ -19,7 +23,7 @@ var lengthOfLongestSubstring = function(s) {
       accS = ""
     }
   }
-  console.log(dict)
+  //console.log(dict)
   for (k in dict){
     if(dict[k] > max_len){
       max_len = dict[k]

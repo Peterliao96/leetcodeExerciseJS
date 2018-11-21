@@ -2,40 +2,30 @@
  * @param {string} s
  * @return {string}
  */
-function isPalidrome(s){
-  for (var i = 0; i < Math.ceil(s.length / 2); i++){
-    if(s[i] != s[s.length - i - 1]){
-      return false
-    }
-  }
-  return true
-}
+
 var longestPalindrome = function(s) {
-  let dict = {}
-  let updated_s = ""
-  let i = 0;
-  let j = 2;
-  let max_len = 0
-  while (i < s.length){
-    while( j <= s.length){
-      if(isPalidrome(s.slice(i,j))){
-        dict[s.slice(i,j)] = s.slice(i,j).length
-        j+=1
-      } else {
-        j+=1
-      }
+  let res = ""
+    function checkPalindrome(l, r){
+        while (l >= 0 && r < s.length){
+            if (s[l] == s[r]){
+                l -= 1;
+                r += 1;
+            } else{
+                break;
+            }}
+        l += 1;
+        r -= 1;
+        if (r - l + 1 > res.length){
+            res = s.substring(l, r + 1);
+            }
     }
-    i+=1
-    j = i + 2
-  }
-  console.log(dict)
-  for (s in dict){
-    if(dict[s] > max_len){
-      max_len = dict[s]
-      updated_s = s
+    for (let i = 0; i < s.length; i++){
+        if (i > 0 && s[i] == s[i - 1]){
+            checkPalindrome(i - 1, i);
+        }
+        checkPalindrome(i, i);
     }
-  }
-  return updated_s
+    return res;
 };
 
 module.exports = longestPalindrome
