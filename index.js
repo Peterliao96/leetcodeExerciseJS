@@ -8,5 +8,7 @@ const longestPalindrome = require('./5.longest-palindromic-substring');
 const letterCombinations = require('./17.letter-combinations-of-a-phone-number')
 const reverse = require('./7.reverse-integer')
 //console.log(reverse(-1234))
+const maxArea = require('./11.container-with-most-water')
+console.log(maxArea([2,3,10,5,7,8,9]))
 //console.log(letterCombinations('2456'))
 //console.log(findMedianSortedArrays([1,2],[3,4]))
